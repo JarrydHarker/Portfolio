@@ -55,3 +55,18 @@ function showSection(index) {
         }
     }
 }
+
+function toggleAccordion(element) {
+    let content = element.nextElementSibling;
+    let icon = element.querySelector(".toggle-icon");
+
+    if (content.classList.contains("open")) {
+        content.style.maxHeight = "0px";  // Collapse
+        content.classList.remove("open");
+        icon.style.transform = "rotate(0deg)";  // Reset arrow
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px"; // Expand
+        content.classList.add("open");
+        icon.style.transform = "rotate(180deg)";  // Rotate arrow
+    }
+}

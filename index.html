@@ -9,27 +9,32 @@
 </head>
 <body>
     <nav class="navbar">
-            <div class="nav-item" id="bioLink">Biography</div>
-            <div class="nav-item" id="projectsLink">Projects</div>
-            <div class="nav-item" id="profLink">Professional</div>
+        <div class="nav-item" id="bioLink">Biography</div>
+        <div class="nav-item" id="projectsLink">Projects</div>    
+        <div class="nav-item" id="profLink">Professional</div>        
     </nav>
 
-    <div class="Quinary" id="Biography">
-        <h2>Introduction</h2>
-        <p>
-            Hi there, my name is Jarryd Harker and I am a software developer, gym bro, and fervent Everton supporter. I made this website to showcase my skills, projects, hobbies, and interests. Whether you're a friend, family, or a potential employer feel free to have a poke around to get a feel of who I am and what I do.  
-        </p>
+    <div id="Biography">
+        <div class="container">
+            <h2>Introduction</h2>
+            <div style="padding: 0;">
+                Hi there, my name is Jarryd Harker and I am a software developer, gym bro, and fervent Everton supporter. I made this website to showcase my skills, projects, hobbies, and interests. Whether you're a friend, family, or a potential employer feel free to have a poke around to get a feel of who I am and what I do.  
+            </div>
+        </div>
 
-        <h2>Education</h2>
-        <p>
-            <a href="https://www.varsitycollege.co.za/"><b>Varsity College Nelson Mandela Bay</a>, South Africa (2022 - 2024)</b><br/>
-            Bachelor of Computer and Information
-            Sciences in Application Development
-        </p>
-        <p>
-            <b><a href="https://www.greyhighschool.com/">Grey High School</a>, Port Elizabeth, South Africa (2016 - 2020)</b><br/>
-            National Senior Certificate
-        </p>
+        <div class="container">
+            <h2>Education</h2>
+            <p>
+                <a href="https://www.varsitycollege.co.za/"><b>Varsity College Nelson Mandela Bay</a>, South Africa (2022 - 2024)</b><br/>
+                Bachelor of Computer and Information
+                Sciences in Application Development
+            </p>
+            <p>
+                <a href="https://www.greyhighschool.com/"><b>Grey High School</a>, Port Elizabeth, South Africa (2016 - 2020)</b><br/>
+                National Senior Certificate
+            </p>
+        </div>
+        
 
         <h2>Hobbies</h2>
         <p>
@@ -38,16 +43,54 @@
     </div>
 
     <div id="Projects">
-        <div class="project-card">
-            <h2>Project 1: Municipal Ticket System </h2>
-            I Created a WPF application using C# and SQL Server.
-            I Designed and implemented an AI chatbot,usingOllama API
-            integration, to assist with user queries.
-            I made use of queues, linked lists, graphs, and binary search trees
-            this project can be found on <a href="https://github.com/JarrydHarker/Prog-Poe-Public">GitHub</a> 
+        <div class="project-container">
+            <div class="project-header" onclick="toggleAccordion(this)">
+                <h2>Programming POE: Municipal Ticket System</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="project-card">
+                <h2>Municipal Ticket System (Programming POE)</h2>
+                
+                <p>
+                    A WPF application built using C# and SQL Server, designed to streamline municipal issue reporting.
+                </p>
+            
+                <p>
+                    The application allows users to report issues, track their status, and stay updated on local events. 
+                    It features an AI chatbot, powered by the Ollama API, to assist users with queries. The system utilizes 
+                    data structures like queues, linked lists, graphs, and binary search trees for efficient processing.
+                </p>
+            
+                <div class="project-gallery">
+                    <figure>
+                        <img class="project-image" src="Images/PROGPOE/Bot.PNG" alt="AI Chatbot">
+                        <figcaption>AI Chatbot</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="project-image" src="Images/PROGPOE/Report.PNG" alt="Report Issue">
+                        <figcaption>Submit a Report</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="project-image" src="Images/PROGPOE/Status.PNG" alt="Track Status">
+                        <figcaption>Monitor Status</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="project-image" src="Images/PROGPOE/Events.PNG" alt="Local Events">
+                        <figcaption>View Events</figcaption>
+                    </figure>
+                </div>
+            
+                <p>
+                    Users can submit reports by selecting a location, choosing a category, adding a description, 
+                    and optionally uploading a file.
+                </p>
+            
+                <p>
+                    Check out the project on 
+                    <a href="https://github.com/JarrydHarker/Prog-Poe-Public" target="_blank">GitHub</a>.
+                </p>
+            </div>  
         </div>
-        
-        
     </div>
     
     <div id="Professional">
