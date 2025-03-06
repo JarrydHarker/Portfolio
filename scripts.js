@@ -63,7 +63,7 @@ function toggleAccordion(element) {
     if (content.classList.contains("open")) {
         content.style.maxHeight = "0px";  // Collapse
         content.classList.remove("open");
-        icon.style.transform = "rotate(0deg)";  // Reset arrow
+        icon.style.transform = "rotate(360deg)";  // Reset arrow
     } else {
         content.style.maxHeight = content.scrollHeight + "px"; // Expand
         content.classList.add("open");

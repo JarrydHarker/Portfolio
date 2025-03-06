@@ -8,7 +8,7 @@
     --image-ratio : 5;*/
 
     --background : #363537;
-    --primary : #EA6A1F;
+    --primary : #2a292b;
     --accent : #F57A95;
     --secondary : #787878;
     --Quinary : #7BF1A8;
@@ -56,11 +56,41 @@ h2{
     margin: 5px 0;
 }
 
+
 .container{
-    margin: 0 10px;
+    display: flex;
+}
+
+.profile-container {
+    width: 200px; 
+    height: 200px; 
+    margin: 10px;
+    border-radius: 50%;
+    display: inline-block; 
+    overflow: hidden; 
+    position: relative;
+  }
+  
+  .profile-container img {
+    position: absolute; 
+    top: 50%; /* Centers the image vertically */
+    left: 50%; /* Centers the image horizontally */
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+  }
+
+.text-block{
+    margin: 30px 10px ;
     border-radius: 10px;
-    background-color: var(--accent);
+    background-color: black;
+    color: white;
     width: 50%;
+}
+
+.in-progress{
+    display: none;
 }
 
 /*Navbar styling */
@@ -92,29 +122,9 @@ h2{
     }
 
     .nav-item-selected{
-        background-color: var(--primary) !important;
+        background-color: var(--accent) !important;
     }
 /*----------------------------------------------------------------------*/
-
-.Primary {
-    background-color: var(--Primary);
-}
-
-.Secondary{
-    background-color: var(--Secondary);
-}
-
-.Tertiary{
-    background-color: var(--Tertiary);
-}
-
-.Quaternary{
-    background-color: var(--Quaternary);
-}
-
-.Quinary{
-    background-color: var(--Quinary);
-}
 
 .hidden {
     display: none !important;
@@ -131,6 +141,7 @@ h2{
 }
 
     .project-header .toggle-icon {
+        margin: 0 0 0 20px;
         display: inline-block;
         transition: transform 0.3s ease; /* Smooth rotation */
     }
