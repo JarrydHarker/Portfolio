@@ -117,6 +117,29 @@ h2{
     width: 30%; 
 }
 
+.table-icon{
+    height: auto;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+    .table-icon:hover{
+        transform: scale(1.5);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+.download-icon{
+    height: auto;
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+    .download-icon:hover{
+        transform: scale(1.25);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
 
 .marks-table th, 
 .marks-table td {
