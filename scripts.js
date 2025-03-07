@@ -3,6 +3,8 @@ const projectsIndex = 1;
 const profIndex = 2;
 
 const items = ["bioLink", "projectsLink", "profLink"]
+var years;
+var currentYear = 0;
 
 var bio;
 var projects;
@@ -15,7 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
     projects = document.getElementById("Projects");
     prof = document.getElementById("Professional");
 
+    first = document.getElementById("1st");
+    second = document.getElementById("2nd");
+    third = document.getElementById("3rd");
+
     sections = [bio, projects, prof];
+    years = [first, second, third];
+
+    DisplayYear(currentYear);
 
     showSection(bioIndex)
 
@@ -69,4 +78,32 @@ function toggleAccordion(element) {
         content.classList.add("open");
         icon.style.transform = "rotate(180deg)";  // Rotate arrow
     }
+}
+
+function DisplayYear(num){
+    years.forEach((year, i) => {
+        console.log(year);
+        console.log((i === num));
+        if(i === num){
+            year.classList.add("table-section-selected");
+            year.classList.remove("table-section");
+        }else{
+            year.classList.add("table-section");
+            year.classList.remove("table-section-selected");
+        }
+    });
+}
+
+function NextSection(){
+    if(currentYear < 2) currentYear++;
+    else currentYear = 0;
+
+    DisplayYear(currentYear);
+}
+
+function PrevSection(){
+    if(currentYear > 0) currentYear--;
+    else currentYear = 2;
+
+    DisplayYear(currentYear);
 }

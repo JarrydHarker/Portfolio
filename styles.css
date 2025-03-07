@@ -85,6 +85,63 @@ h2{
     display: none;
 }
 
+/*Style for Table*/
+.table-div{
+    width: 80%;
+    background-color: var(--accent);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.table-section{
+    display: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.table-section-selected{
+    display: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+.marks-table {
+    table-layout: fixed;
+    height: 100%;
+    border-collapse: collapse; 
+    border: 2px solid black;
+    width: 100%;
+}
+
+.marks-table td:nth-child(2), .marks-table th:nth-child(2) {
+    width: 30%; 
+}
+
+
+.marks-table th, 
+.marks-table td {
+    border: 2px solid black; 
+    padding: 10px;
+    text-align: left;
+    height: 25px;
+    white-space: nowrap;
+}
+
+.marks-table tr:first-child th {
+    background-color: var(--accent);
+}
+
+/* Style for the Year rows */
+.marks-table tr:nth-child(9n+1) td {
+    font-weight: bold;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+/*----------------------------------------------------------------------*/
+
 /*Navbar styling */
 .navbar{
     display: flex;
