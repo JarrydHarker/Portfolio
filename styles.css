@@ -1,11 +1,15 @@
 :root{
     --background : #363537;
     --primary : #2a292b;
-    --accent : #F57A95;
+    --accent : #FFA7BA;
     --secondary : #787878;
     --blacktrans : #00000099;
 
     --image-ratio : 5;
+}
+
+html {
+    overflow-y: scroll;
 }
 
 body {
@@ -43,14 +47,29 @@ div{
 }
 
 h2{
+    color: white;
     font-size: x-large;
     font-weight: 600;
     margin: 5px 0;
 }
 
+a {
+    color: var(--accent);
+    font-weight: 100;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
 
 .container{
     display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
 }
 
 .profile-container {
@@ -93,8 +112,7 @@ h2{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;
+    color: white;
 }
 
 .table-section{
@@ -111,6 +129,7 @@ h2{
 
 .table-control{
     margin: 10px;
+    width: min-content;
     border-radius: 15px;
     background-color: #ffa7ba;
     display: flex;
@@ -123,6 +142,7 @@ h2{
     height: 100%;
     border-collapse: collapse; 
     width: 100%;
+    color: black;
 }
 
 .marks-table td:nth-child(2), .marks-table th:nth-child(2) {
@@ -130,11 +150,11 @@ h2{
 }
 
 .marks-table tr:nth-child(even) { /* Style for even rows */
-    background-color: #ffa7ba; 
+    background-color: #d3d3d3B3; 
 }
 
 .marks-table tr:nth-child(odd) { /* Style for odd rows */
-    background-color: #d3d3d3; 
+    background-color: #d3d3d3CC; 
 }
 
 .table-icon{
@@ -237,12 +257,9 @@ h2{
         transition: transform 0.3s ease; /* Smooth rotation */
     }
 
-.projects-container {
-    border-radius: 15px;
-    padding: 10px;
-    margin: 0 15px;
-    background-color: var(--Quinary);
-    border: 2px solid gray;
+.project-container {
+    padding: 0px;
+    margin: 0px;
     overflow: hidden;
 }
 
@@ -251,7 +268,7 @@ h2{
     padding: 0px 25px;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
-    background-color: var(--secondary);
+    background-color: var(--blacktrans);
     color: white;
 }
 
@@ -306,14 +323,4 @@ h2{
     font-size: 0.9em;
     color: white;
     margin-top: 5px;
-}
-
-a {
-    color: white;
-    font-weight: 100;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
