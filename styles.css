@@ -3,7 +3,7 @@
     --primary : #2a292b;
     --accent : #F57A95;
     --secondary : #787878;
-    --Quinary : #7BF1A8;
+    --blacktrans : #00000099;
 
     --image-ratio : 5;
 }
@@ -76,7 +76,7 @@ h2{
 .text-block{
     margin: 30px 10px ;
     border-radius: 10px;
-    background-color: black;
+    background-color: var(--blacktrans);
     color: white;
     width: 50%;
 }
@@ -88,9 +88,13 @@ h2{
 /*Style for Table*/
 .table-div{
     width: 80%;
-    background-color: var(--accent);
+    background-color: var(--blacktrans);
     padding: 10px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
 
 .table-section{
@@ -105,11 +109,19 @@ h2{
     margin: 0px;
 }
 
+.table-control{
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #ffa7ba;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
 .marks-table {
     table-layout: fixed;
     height: 100%;
     border-collapse: collapse; 
-    border: 2px solid black;
     width: 100%;
 }
 
@@ -117,7 +129,16 @@ h2{
     width: 30%; 
 }
 
+.marks-table tr:nth-child(even) { /* Style for even rows */
+    background-color: #ffa7ba; 
+}
+
+.marks-table tr:nth-child(odd) { /* Style for odd rows */
+    background-color: #d3d3d3; 
+}
+
 .table-icon{
+    margin: 0px;
     height: auto;
     width: 50px;
     transition: transform 0.3s ease;
@@ -130,6 +151,7 @@ h2{
     }
 
 .download-icon{
+    margin: 0px;
     height: auto;
     width: 40px;
     transition: transform 0.3s ease;
@@ -143,7 +165,7 @@ h2{
 
 .marks-table th, 
 .marks-table td {
-    border: 2px solid black; 
+    /*border: 2px solid lightgray; */
     padding: 10px;
     text-align: left;
     height: 25px;
@@ -151,17 +173,14 @@ h2{
 }
 
 .marks-table tr:first-child th {
-    background-color: var(--accent);
+    background-color: #ffa7ba;
 }
 
 /* Style for the Year rows */
 .marks-table tr:nth-child(9n+1) td {
     font-weight: bold;
     text-align: center;
-    border-left: none;
-    border-right: none;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    width: 100%;
 }
 /*----------------------------------------------------------------------*/
 
