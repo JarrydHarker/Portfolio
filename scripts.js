@@ -1,12 +1,14 @@
 const bioIndex = 0;
-const projectsIndex = 1;
-const profIndex = 2;
+const hobbyIndex = 1;
+const projectsIndex = 2;
+const profIndex = 3;
 
-const items = ["bioLink", "projectsLink", "profLink"]
+const items = ["bioLink", "hobbyLink", "projectsLink", "profLink"]
 var years;
 var currentYear = 0;
 
 var bio;
+var hobbies;
 var projects;
 var prof;
 
@@ -14,6 +16,7 @@ var sections;
 
 document.addEventListener("DOMContentLoaded", function() {
     bio = document.getElementById("Biography");
+    hobbies = document.getElementById("Hobbies");
     projects = document.getElementById("Projects");
     prof = document.getElementById("Professional");
 
@@ -21,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     second = document.getElementById("2nd");
     third = document.getElementById("3rd");
 
-    sections = [bio, projects, prof];
+    sections = [bio, hobbies, projects, prof];
     years = [first, second, third];
 
     DisplayYear(currentYear);
@@ -30,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("bioLink").addEventListener("click", function() {
         showSection(bioIndex);
+    });
+
+    document.getElementById("hobbyLink").addEventListener("click", function() {
+        showSection(hobbyIndex);
     });
     
     document.getElementById("projectsLink").addEventListener("click", function() {

@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jarryd Harker</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@latest/dist/model-viewer.js"></script>
     <script src="scripts.js"> </script> 
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-item" id="bioLink">Biography</div>
+        <div class="nav-item" id="hobbyLink">Hobbies</div>
         <div class="nav-item" id="projectsLink">Projects</div>    
         <div class="nav-item" id="profLink">Professional</div>        
     </nav>
@@ -99,11 +101,26 @@
                     </div>
                 </div>    
         </div>
+    </div>
 
-        <!--<h2>Hobbies</h2>-->
-        <p>
-
-        </p>
+    <div id="Hobbies">
+        <h2>Hobbies</h2>
+        <div class="text-block">
+            Music Production:
+            <audio controls>
+                <source src="Audio/Bop.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <audio controls>
+                <source src="Audio/Hum.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <div class="text-block">
+            3D Modeling
+        </div>
+        
     </div>
 
     <div id="Projects">
@@ -169,7 +186,7 @@
         <iframe src="Documents/CV.pdf" width="75%" height="800"></iframe>
 
         <h2>Skills</h2>
-        <h2></h2>
+        
     </div>
 </body>
 </html>
