@@ -166,6 +166,7 @@ a {
     cursor: grab;
     flex-shrink: 0; 
     user-select: none;
+    scroll-behavior: smooth;
 }
 
     .skills-card:active {
