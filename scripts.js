@@ -46,6 +46,34 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("profLink").addEventListener("click", function() {
         showSection(profIndex);
     });
+
+
+    //Skills Carousel Section
+    const skillsContainer = document.querySelector(".skills-container");
+
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+
+    skillsContainer.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        scrollLeft = skillsContainer.scrollLeft;
+        skillsContainer.style.cursor = "grabbing";
+    });
+
+    document.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        const x = e.clientX - startX;
+        skillsContainer.scrollLeft = scrollLeft - x;
+    });
+
+    document.addEventListener("mouseup", () => {
+        isDragging = false;
+        skillsContainer.style.cursor = "grab";
+    });
+
+//------------------------------------------------------------------------------------
 });
 
 
